@@ -1,0 +1,6 @@
+- https://www.tcl.tk/
+- https://docs.python.org/3/library/tkinter.html for python.
+- Books
+  - Python and Tkinter Programming. JOHN E. G RAYSON. Можно найти в PDF. Рассматривается версия 8.5, в которой применение стилей отличается от более новой версии 8.6. 
+  - Modern Tkinter for Busy Python Developers. Mark Roseman. Можно найти в PDF. Информация в гниге та же, что и на сайте https://tkdocs.com/.
+- [Tkinter in Python - putting on the style!](https://tkinterttkstyle.readthedocs.io/en/latest/index.html), [GitHub](https://github.com/Edgar-Donk/tkinter.ttk.style). A quick tour, with working examples, through the tkinter.ttk Style module, so that you should be able to test a widget and check its styling changes on your own ideas and scripts.

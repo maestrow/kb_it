@@ -1,0 +1,1 @@
+python manage.py shell -c "from core import incubator; incubator.mutate_the_population()"

@@ -1,0 +1,4 @@
+- https://fonts.google.com
+- https://www.uigoodies.com/
+- https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free
+- https://unsplash.com/ - The internet’s source of freely-usable images.

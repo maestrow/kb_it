@@ -1,0 +1,6 @@
+- https://pve.proxmox.com/wiki/FAQ, see "LXC vs LXD vs Proxmox Containers vs Docker"
+- https://proxmox.com/en/proxmox-ve
+- docker & kubernates
+- https://linuxcontainers.org/ (LXC, LXD, LSCFS)
+  - https://github.com/lxc/lxd/
+- https://multipass.run/ - Get an instant Ubuntu VM with a single command. Multipass can launch and run virtual machines and configure them with cloud-init like a public cloud. Prototype your cloud launches locally for free. Multipass is a mini-cloud on your workstation using native hypervisors of all the supported plaforms (Windows, macOS and Linux), it will give you an Ubuntu command line in just a click ("Open shell") or a simple multipass shell command, or even a keyboard shortcut.

@@ -1,0 +1,1 @@
+- https://stackoverflow.com/questions/8593645/is-it-ok-to-leave-a-channel-open

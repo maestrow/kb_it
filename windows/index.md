@@ -1,0 +1,1 @@
+- [Special shell commands](https://winaero.com/blog/list-of-shell-commands-in-windows-10/)

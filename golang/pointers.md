@@ -1,0 +1,3 @@
+- https://stackoverflow.com/questions/8768344/what-are-pointers-to-pointers-good-for/8769095
+- https://www.tutorialspoint.com/go/go_pointer_to_pointer.htm
+- https://www.geeksforgeeks.org/go-pointer-to-pointer-double-pointer/

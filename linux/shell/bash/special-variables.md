@@ -1,0 +1,5 @@
+- arguments of previous command
+  - $_ or !$ - args of last command
+  - !!:1, !!:2 ...
+- `$0` - Stores return status code of the last executed command. 0 - usually means success. [source](https://stackoverflow.com/questions/6834487/what-is-the-dollar-question-mark-variable-in-shell-scripting)
+- [$IFS](https://riptutorial.com/bash/example/16872/-ifs) Field Separator string that bash uses to split strings when looping etc. The default is the white space characters: \n (newline), \t (tab) and space/.

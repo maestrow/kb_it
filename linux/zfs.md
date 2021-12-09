@@ -1,0 +1,4 @@
+- https://zfsonlinux.org/
+- Книга "Introducing ZFS on Linux. Understand the Basics of Storage with ZFS. — Damian Wojslaw".
+- https://www.hiroom2.com/2016/05/18/ubuntu-16-04-share-zfs-storage-via-nfs-smb/
+- https://wiki.debian.org/ZFS

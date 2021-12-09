@@ -1,0 +1,5 @@
+- OBject: Bool tool
+- Mesh: LoopTools
+- Mesh: 3D-Print Toolbox
+- 3D View: Precision Drawing Tools (PDT)
+- Add Mesh: Extra Objects

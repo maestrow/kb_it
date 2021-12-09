@@ -1,0 +1,1 @@
+- `reflect.ValueOf(v).Kind() == reflect.Ptr`

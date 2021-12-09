@@ -1,0 +1,3 @@
+- python manage.py findstatic --verbosity 2 css/styles.css
+- https://stackoverflow.com/questions/12809416/django-static-files-404
+- ./manage.py collectstatic

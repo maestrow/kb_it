@@ -1,0 +1,2 @@
+- https://medium.com/@felipedutratine/golang-how-to-handle-errors-in-v1-13-fda7f035d027
+- Errors should not usually be value receivers, so that independent values do not compare equal. See the most basic errors.New return value.

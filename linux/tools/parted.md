@@ -1,0 +1,4 @@
+- [Parted output with two free space rows](https://unix.stackexchange.com/questions/106919/parted-output-with-two-free-space-rows)
+- [Create partition aligned using parted](https://unix.stackexchange.com/questions/38164/create-partition-aligned-using-parted)
+- [parted command (start and end meaning)](https://unix.stackexchange.com/questions/516540/parted-command-start-and-end-meaning)
+- https://opensource.com/article/18/6/how-partition-disk-linux
