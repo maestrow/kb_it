@@ -1,7 +1,35 @@
+- [Links](#links)
+  - [Git CSM links](#git-csm-links)
+- [Common](#common)
+- [Commits](#commits)
+- [Branches](#branches)
+  - [Git workflow with clean master](#git-workflow-with-clean-master)
+- [Merge](#merge)
+- [Squash and Merge](#squash-and-merge)
+- [Rebase](#rebase)
+- [Revert](#revert)
+  - [Revert files permissions](#revert-files-permissions)
+  - [`git clean`](#git-clean)
+- [Pull from remote branch to new empty local branch. Then push local branch.](#pull-from-remote-branch-to-new-empty-local-branch-then-push-local-branch)
+- [Log](#log)
+- [Rebase interactive](#rebase-interactive)
+- [Tags](#tags)
+- [Stash](#stash)
+- [Pull: `cannot locl ref` error](#pull-cannot-locl-ref-error)
+- [Configurations](#configurations)
+- [Diff](#diff)
+- [Remote](#remote)
+  - [Set upstream](#set-upstream)
+  - [Show remote](#show-remote)
+  - [Change remote's URL](#change-remotes-url)
+
 ## Links
 
 - https://jonsuh.com/blog/git-command-line-shortcuts/
 
+### Git CSM links
+
+- https://git-scm.com/book/en/v2/Git-Basics-Tagging
 
 ## Common
 
@@ -84,6 +112,16 @@ do commits, make PR #2
 fonts-firacode
     git pull https://url <branch-name>
 
+
+## Squash and Merge
+
+```
+git checkout master
+git merge --squash bugfix
+git commit
+```
+
+source: https://stackoverflow.com/questions/5308816/how-can-i-merge-multiple-commits-onto-another-branch-as-a-single-squashed-commit
 
 ## Rebase
 

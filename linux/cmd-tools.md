@@ -21,6 +21,8 @@ which $file
 readlink -f $file # 
 ```
 
+Remove all from current dir: `rm -rf ..?* .[!.]* *`. source: https://unix.stackexchange.com/questions/77127/rm-rf-all-files-and-all-hidden-files-without-error
+
 ## Run as super user
 
 ```
@@ -96,14 +98,6 @@ sed -i -e 's/\r$//' $FILE # Remove the spurious CR characters
 
 ps aux | grep -i nginx
 pgrep nginx
-
-
-## Tar
-
-Unpack:      
-
-    tar -xvf file.tar
-    tar -xzvf file.tar.gz
 
 ## ZIP
 
