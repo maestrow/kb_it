@@ -13,6 +13,7 @@ or for specific command:
 `sudo -i` - elevate yourself to super user
 `su -l <username>` - switch user
 `su -` switch user to root
+`sudo --validate`
 
 ### Change root password
 

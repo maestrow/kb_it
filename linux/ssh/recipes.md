@@ -1,10 +1,31 @@
 # SSH Recipes
 
+- [How to access a Linux server behind NAT via reverse SSH tunnel](https://www.xmodulo.com/access-linux-server-behind-nat-reverse-ssh-tunnel.html)
+
 ## ssh-copy-id
 
 Для копирования ключа на хост удобно использовать утилиту ssh-copy-id. Например, ssh-copy-id -p 2222 root@host. Эта команда добавит ключ из ~/.ssh/id_rsa.pub в /root/.ssh/authorized_keys.
 
 Для первого запуска на хосте должен быть разрешен логин с паролем (PasswordAuthentication yes). После копирования ключа, логин с паролем следует запретить.
+
+### For other users
+
+source: https://superuser.com/questions/603301/install-public-key-via-ssh-copy-id-for-other-users
+
+```bash
+$home="..." \
+$user="..." \
+cat ~/.ssh/id_rsa.pub | \
+ssh $host "sudo mkdir -p /home/$user/.ssh; sudo tee -a /home/$user/.ssh/authorized_keys"
+```
+
+One more example:
+
+```bash
+cat ~/.ssh/id_rsa.pub | \
+  ssh pi@192.168.1.25 \
+  "sudo mkdir -p /root/.ssh; sudo tee -a /root/.ssh/authorized_keys"
+```
 
 ## HowTo: Root login by password
 

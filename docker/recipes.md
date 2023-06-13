@@ -7,12 +7,13 @@
 - [Usefull as command substitution](#usefull-as-command-substitution)
 - [Images](#images)
   - [List and filter](#list-and-filter)
-  - [Stop & remove all images](#stop--remove-all-images)
+  - [Stop \& remove all images](#stop--remove-all-images)
   - [See docker image contents without running](#see-docker-image-contents-without-running)
 - [Run image](#run-image)
   - [Override cmd when running image](#override-cmd-when-running-image)
   - [How to copy Docker images from one host to another without using a repository](#how-to-copy-docker-images-from-one-host-to-another-without-using-a-repository)
 - [Containers](#containers)
+  - [Run, Expose port](#run-expose-port)
   - [ps, format](#ps-format)
     - [export container to tar](#export-container-to-tar)
     - [list tar content](#list-tar-content)
@@ -21,6 +22,7 @@
   - [Logs](#logs)
   - [Run some code in container](#run-some-code-in-container)
 - [Volumes](#volumes)
+  - [Rename volume](#rename-volume)
 - [Private registry](#private-registry)
   - [API](#api)
     - [View Images](#view-images)
@@ -108,6 +110,16 @@ source: https://stackoverflow.com/questions/23935141/how-to-copy-docker-images-f
 
 # Containers
 
+## Run, Expose port
+
+- https://stackoverflow.com/questions/22111060/what-is-the-difference-between-expose-and-publish-in-docker
+- https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose
+
+    docker run -p 127.0.0.1:80:8080/tcp ubuntu bash
+
+`-p <host>:<container>/<prococol>`
+
+
 ## ps, format
 
     docker ps --no-trunc --format "table {{.Command}}"
@@ -137,6 +149,7 @@ source: https://stackoverflow.com/questions/32353055/how-to-start-a-stopped-dock
 
 - https://stackoverflow.com/questions/31324981/how-to-access-host-port-from-docker-container
 - https://docs.docker.com/docker-for-mac/networking/#use-cases-and-workarounds Special DNS name `host.docker.internal`, which resolves to the internal IP address used by the host. This applied to macOS and Windows only, in linux there is only [feature request](https://github.com/docker/for-linux/issues/264).
+- [Connecting from Docker Containers to Resources in the Host](https://www.baeldung.com/linux/docker-connecting-containers-to-host) March 11, 2022
 
 ## Logs
 
@@ -164,6 +177,16 @@ docker volume create \
 	--opt o=bind \
 	--name sprintschool-grav
 ```
+
+## Rename volume
+
+source: https://github.com/moby/moby/issues/31154
+
+For those who don't run Docker on Linux, and as such can't easily access /var/lib/docker on the root VM, you can still just create the new volume and create a temporary container to copy your data:
+
+    docker volume create --name <new_volume>
+    docker run --rm -it -v <old_volume>:/from -v <new_volume>:/to alpine ash -c "cd /from ; cp -av . /to"
+    docker volume rm <old_volume>
 
 
 # Private registry

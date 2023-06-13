@@ -1,0 +1,1 @@
+- [Static Key Mini-HOWTO](https://openvpn.net/community-resources/static-key-mini-howto/)

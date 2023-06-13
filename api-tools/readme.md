@@ -1,0 +1,8 @@
+- tcpdump & wireshark
+- mitmproxy
+- swagger
+- postman
+- clients
+  - VSCode Rest Client Extension
+  - HTTPie (puthon)
+  - [insomnia](https://insomnia.rest/)

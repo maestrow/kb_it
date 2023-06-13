@@ -136,11 +136,18 @@ source: https://stackoverflow.com/questions/5308816/how-can-i-merge-multiple-com
 
     git reset HEAD~     # revert last commit and save changes as untracked items
     git reset HEAD@{1}  # specifies the n-th prior value of that ref. For example master@{1} is the immediate prior value of master while master@{5} is the 5th prior value of master. Save changes as untracked items
-    git reset --hard    # undo all working dir changes including new files
     git checkout -- "proto/*"  # revert changes in files by mask
-    git reset           # unstage all files
+    git reset           # unstage all files, they will be removed from the staging area back to your working directory.
 
 - [Revert last commit after push](https://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html)
+
+    git reset --hard # removes staged and working directory changes
+    ## !! be very careful with these !!
+    ## you may end up deleting what you don't want to
+    ## read comments and manual.
+    git clean -f -d # remove untracked
+    git clean -f -x -d # CAUTION: as above but removes ignored files like config.
+    git clean -fxd :/ # CAUTION: as above, but cleans untracked and ignored files through the entire repo (without :/, the operation affects only the current directory)
 
 ### Revert files permissions
 
@@ -207,9 +214,16 @@ Do not rebase commits that exist outside your repository.
 
 ## Tags
 
+- https://git-scm.com/book/en/v2/Git-Basics-Tagging
+
     git tag                   # list tags
     git rev-list -n 1 v2.0.20 # show tag commit
     git branch --contains tags/v3.0.0 # show branch, containing tag
+
+Lightweight Tags:
+
+    git tag v0.1.1
+    git push origin v0.1.1
 
 ## Stash 
 
@@ -239,6 +253,9 @@ Example:
 
     git diff --name-only <pattern>
     git diff HEAD:full/path/to/foo full/path/to/bar
+    git diff --staged *.ts # Once the changes are staged, you need to use --staged flag 
+
+docs: https://www.specbee.com/blogs/how-create-and-apply-patch-git-diff-and-git-apply-commands-your-drupal-website
 
 ## Remote
 

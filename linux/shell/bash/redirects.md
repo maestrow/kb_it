@@ -24,6 +24,8 @@ Use `>>` to append
 
 ## Input
 
+### Here document
+
 << here document
 ```sh
 $ wc << EOF
@@ -33,7 +35,18 @@ $ wc << EOF
  2  5 24
 ```
 
+### Here string
+
 <<< here string
 ```sh
 bc <<< 5*4
 ```
+
+Here string adds trailing new line (see [Why does a bash here-string add a trailing newline char?](https://unix.stackexchange.com/questions/20157/why-does-a-bash-here-string-add-a-trailing-newline-char)).
+
+xxd -p <<<'a'  
+# output: 610a
+
+xxd -p <<<'a
+'
+# output: 610a0a

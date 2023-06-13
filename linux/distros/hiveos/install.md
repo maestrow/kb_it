@@ -1,7 +1,12 @@
-- https://github.com/minershive/hiveos-linux
+## Resources
 
+- https://github.com/minershive/hiveos-linux
 - https://github.com/minershive/hiveos-linux/tree/master/hive/sbin - всякие скрипты. Например из интересных:
   - nvidia-driver-update
+
+## Recipes 
+
+- [How to setup Hive OS as VM on Proxmox](https://www.reddit.com/r/Proxmox/comments/oqwriu/hive_os_on_proxmox/)
 
 ## Регистрация фермы на сайте hiveos.farm
 

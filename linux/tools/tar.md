@@ -12,7 +12,7 @@
 
     tar -xvf file.tar
     tar -xzvf file.tar.gz
-
+    tar xzf archive.tar.gz -C /destination
 
 ## To view contents of tar file without extracting it
 

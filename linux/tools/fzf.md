@@ -1,0 +1,6 @@
+- https://github.com/junegunn/fzf Repo
+- https://github.com/junegunn/fzf/wiki/examples
+- https://github.com/junegunn/fzf/blob/master/ADVANCED.md
+- [Demo](https://www.youtube.com/watch?v=qgG5Jhi_Els)
+- [A Practical Guide to fzf: Building a File Explorer](https://thevaluable.dev/practical-guide-fzf-example/)
+- https://pragmaticpineapple.com/four-useful-fzf-tricks-for-your-terminal/
