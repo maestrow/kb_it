@@ -62,3 +62,21 @@ restrict=on|off
 > If this option is enabled, the guest will be isolated, i.e. it will not be able to contact the host and no guest IP packets will be routed over the host to the outside. This option does not affect any explicitly set forwarding rules.
 
 Т.о. можно в одном ключе `-netdev` можно использовать опцию `hostfwd` и `restrict=on`, чтобы запустить виртуалку изолированно (без доступа в сеть), но при этом с проброшенными портами (например, для доступа по ssh). Пример такой конфигурации: `-netdev user,id=user.0,hostfwd=tcp::10022-:22,restrict=on -device e1000,netdev=user.0`.
+
+
+### Install Ubuntu on qemu Tutorial
+
+Source: https://www.makeuseof.com/install-ubuntu-virtual-machine-with-qemu/
+
+Create a virtual disk image file that's 20GB in size:
+
+    qemu-img create -f qcow2 Image.img 20G
+
+Start virtual machine:
+
+    qemu-system-x86_64 -enable-kvm -cdrom ubuntu.iso -boot menu=on -drive file=Image.img -m 4G -cpu host -vga virtio -display sdl,gl=on
+
+Press Escape to open the boot menu and select the appropriate option to boot from the ISO file.
+After installing Ubuntu, make sure you remove the -cdrom flag from the qemu command. This will boot Ubuntu from the disk image file rather than the ISO file.
+
+    qemu-system-x86_64 -enable-kvm -boot menu=on -drive file=Image.img -m 4G -cpu host -vga virtio -display sdl,gl=on
