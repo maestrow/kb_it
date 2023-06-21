@@ -1,0 +1,1 @@
+- https://c4model.com/ The C4 model for visualising software architecture. Context, Containers, Components, and Code.

@@ -4,6 +4,7 @@
 - [Commits](#commits)
 - [Branches](#branches)
   - [Git workflow with clean master](#git-workflow-with-clean-master)
+- [How to update/checkout a single file from remote origin master?](#how-to-updatecheckout-a-single-file-from-remote-origin-master)
 - [Merge](#merge)
 - [Squash and Merge](#squash-and-merge)
 - [Rebase](#rebase)
@@ -101,6 +102,12 @@ do commits, make PR #2
 ```
 Пункт 2 повторить для каждой ветки (и PR) в цепочке.
 
+## How to update/checkout a single file from remote origin master?
+
+    git fetch
+    git checkout origin/master -- path/to/file
+
+Source: https://intellipaat.com/community/16018/git-how-to-update-checkout-a-single-file-from-remote-origin-master
 
 ## Merge
 
