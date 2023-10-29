@@ -8,6 +8,10 @@
 - https://www.solidjs.com/tutorial/introduction_basics
 
 
+- https://www.youtube.com/watch?v=O6xtMrDEhcE Ryan Carniato - The World Beyond Components
+- https://www.youtube.com/watch?v=G5vwaoXck_g SolidJS: Getting Started, Ryan Carniato, ViteConf 2022
+- https://www.youtube.com/playlist?list=PL4cUxeGkcC9gU_GvFygZFu0aBysPilkbB Solid JS Crash Course Tutorial
+
 ## Create new project
 
     pnpm create solid@latest
@@ -21,6 +25,9 @@ OR
     npm i # or yarn or pnpm
     npm run dev # or yarn or pnpm
 
+### Hackernews
+
+    pnpm create solid@latest
 
 ## Documentation
 
@@ -33,3 +40,6 @@ OR
 
 
 
+## Articles & Tutorials
+
+- https://dev.to/trusktr/a-few-reasons-why-i-love-solid-js-4036

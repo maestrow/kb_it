@@ -1,6 +1,16 @@
 # SSH Recipes
 
-- [How to access a Linux server behind NAT via reverse SSH tunnel](https://www.xmodulo.com/access-linux-server-behind-nat-reverse-ssh-tunnel.html)
+- [SSH Recipes](#ssh-recipes)
+  - [ssh-copy-id](#ssh-copy-id)
+    - [For other users](#for-other-users)
+  - [HowTo: Root login by password](#howto-root-login-by-password)
+  - [Disable PasswordAuthentication, enable Pubkey Authentication](#disable-passwordauthentication-enable-pubkey-authentication)
+  - [HowTo: Pubkey Authentication](#howto-pubkey-authentication)
+    - [Troubleshooting](#troubleshooting)
+  - [Download \& Upload using SSH](#download--upload-using-ssh)
+    - [Download a file from server using SSH](#download-a-file-from-server-using-ssh)
+    - [Upload](#upload)
+  - [Tunnel](#tunnel)
 
 ## ssh-copy-id
 
@@ -83,3 +93,7 @@ Links:
 ### Upload
 
     scp cool_stuff.txt user@example.com:/this/path/right/here
+
+## Tunnel
+
+    ssh -i /path/my-key-pair.pem username@instance-id -L localport:targethost:destport

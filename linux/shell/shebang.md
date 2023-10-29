@@ -20,3 +20,8 @@ Other options:
 
 resources:
 - https://stackoverflow.com/questions/10376206/what-is-the-preferred-bash-shebang
+
+
+## NodeJs Shebang
+
+- https://alexewerlof.medium.com/node-shebang-e1d4b02f731d
