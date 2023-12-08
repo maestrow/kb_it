@@ -23,3 +23,7 @@ To not to print service messages use `2>/dev/null` redirect.
 ## See Also
 
 - [fd](./fd.md)
+
+## Resources
+
+- https://hamwaves.com/find/en/index.html

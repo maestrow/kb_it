@@ -2,11 +2,12 @@
 - [How to view log files on the shell?](https://www.faqforge.com/linux/distributions/debian/linux-how-to-view-log-files-on-the-shell/)
 - [Git Bash won't let me type anything, just shows a blinking cursor](https://stackoverflow.com/questions/28073577/git-bash-wont-let-me-type-anything-just-shows-a-blinking-cursor)
 - [How to Setup an iSCSI Storage Server on Ubuntu 20.04 LTS](https://www.howtoforge.com/tutorial/how-to-setup-iscsi-storage-server-on-ubuntu-2004-lts)
+- [Attach a Terminal to a Detached Process in Linux](https://www.baeldung.com/linux/attach-terminal-detached-process)
 
-### What shell I'm running?
+## What shell I'm running?
     echo $0
 
-### Multiline string
+## Multiline string
 
 possibility 1:
 
@@ -38,11 +39,11 @@ save to variable:
 
 Source: https://serverfault.com/questions/72476/clean-way-to-write-complex-multi-line-string-to-a-variable
 
-### Split and sort $PATH parts
+## Split and sort $PATH parts
 
 IFS=':' read -r -a array <<< $PATH && printf '%s\n' "${array[@]}" | sort
 
-### How To Find Out My Linux Distribution Name and Version?
+## How To Find Out My Linux Distribution Name and Version?
 
 $ cat /etc/*-release
 $ lsb_release -a

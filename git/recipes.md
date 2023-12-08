@@ -3,6 +3,11 @@
 - [Common](#common)
 - [Commits](#commits)
 - [Branches](#branches)
+  - [Create the branch on your local machine and switch in this branch:](#create-the-branch-on-your-local-machine-and-switch-in-this-branch)
+  - [Change working branch](#change-working-branch)
+  - [Push the branch](#push-the-branch)
+  - [Delete branch](#delete-branch)
+  - [Rename branch](#rename-branch)
   - [Git workflow with clean master](#git-workflow-with-clean-master)
 - [How to update/checkout a single file from remote origin master?](#how-to-updatecheckout-a-single-file-from-remote-origin-master)
 - [Merge](#merge)
@@ -52,30 +57,31 @@
     git checkout --track origin/daves_branch    # checkout remote branch
     git checkout master                         # switch to local branch
 
-Create the branch on your local machine and switch in this branch:
+### Create the branch on your local machine and switch in this branch:
 
     git checkout -b [name_of_your_new_branch]
 
-Change working branch :
+### Change working branch
 
     git checkout [name_of_your_new_branch]
 
-Push the branch:
+### Push the branch
 
     git push origin [name_of_your_new_branch]
 
-Delete branch
+### Delete branch
 
     git branch -d the_local_branch              # delete local branch
     git push origin --delete the_remote_branch  # delete remote branch
     git branch | grep -v "master\|dev" | xargs git branch -D  # delete all local branches except
 
-Rename branch
+### Rename branch
 
 https://multiplestates.wordpress.com/2015/02/05/rename-a-local-and-remote-branch-in-git/
 
     git branch -m [old-name] new-name   # local
     git push origin :old-name new-name  # Delete the old-name remote branch and push the new-name local branch
+    git push origin -u new-name         # Reset the upstream branch for the new-name local branch
 
 
 ### Git workflow with clean master

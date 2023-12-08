@@ -17,20 +17,24 @@ tmpfs                   3288880      72   3288808   1% /run/user/1000
 /dev/sdd1               1467360 1467360         0 100% /media/vivek/data
 ```
 
+Another option is to run dmesg command to find out usb device name:
+
+`$ sudo dmesg`
+
+
+## Step 2: Unmount
+
 `$ sudo umount /media/vivek/data`
 
 Or
 
 `$ sudo umount /dev/sdd1`
 
-Another option is to run dmesg command to find out usb device name:
 
-`$ sudo dmesg`
-
-## Step 2: Create a bootable USB stick on Linux
+## Step 3: Create a bootable USB stick on Linux
 
 `$ sudo dd if=artful-desktop-amd64.iso of=/dev/sdd bs=1M status=progress`
 
 ## Issue: Progress not shown
 
-When you write a file to a block device, use dd with oflag=direct. This uses O_DIRECT writes, which avoids using your RAM as a writeback cache. Note that to get good performance, oflag=direct usually needs a large block size.
+When you write a file to a block device, use dd with `oflag=direct`. This uses `O_DIRECT` writes, which avoids using your RAM as a writeback cache. Note that to get good performance, `oflag=direct` usually needs a large block size.
