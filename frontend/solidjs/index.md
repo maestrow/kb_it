@@ -43,3 +43,5 @@ OR
 ## Articles & Tutorials
 
 - https://dev.to/trusktr/a-few-reasons-why-i-love-solid-js-4036
+- https://blog.logrocket.com/understanding-solidjs-props-complete-guide/
+- https://vladislav-lipatov.medium.com/solidjs-pain-points-and-pitfalls-a693f62fcb4c
