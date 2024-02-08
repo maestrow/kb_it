@@ -32,6 +32,7 @@
 ## Links
 
 - https://jonsuh.com/blog/git-command-line-shortcuts/
+- [How to Duplicate a GitHub Repo with History](https://medium.com/javarevisited/how-to-duplicate-a-github-repo-with-history-e2e9b02d2ae)
 
 ### Git CSM links
 
@@ -229,8 +230,10 @@ Do not rebase commits that exist outside your repository.
 
 - https://git-scm.com/book/en/v2/Git-Basics-Tagging
 
-    git tag                   # list tags
-    git rev-list -n 1 v2.0.20 # show tag commit
+    git checkout tags/n8n@1.25.1 # checkout cpecific tag
+    git describe --tags          # show on which tag you are
+    git tag                      # list tags
+    git rev-list -n 1 v2.0.20    # show tag commit
     git branch --contains tags/v3.0.0 # show branch, containing tag
 
 Lightweight Tags:
@@ -274,7 +277,7 @@ docs: https://www.specbee.com/blogs/how-create-and-apply-patch-git-diff-and-git-
 
 ### Set upstream
 
-…or create a new repository on the command line
+...or create a new repository on the command line
 echo "# dotfiles" >> README.md
 git init
 git add README.md
@@ -282,10 +285,10 @@ git commit -m "first commit"
 git remote add origin git@github.com:user/repo.git
 git push -u origin master
                 
-…or push an existing repository from the command line
+...or push an existing repository from the command line
 git remote add origin git@github.com:user/repo.git
 git push -u origin master
-…or import code from another repository
+...or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
 ### Show remote
@@ -294,10 +297,19 @@ You can initialize this repository with code from a Subversion, Mercurial, or TF
 $ git remote     # Showing Your Remotes
 origin
 
+$ git remote show $remote_name
+$ git remote show origin         # show origin remote
+$ git remote show upstream       # show upstream remote
+
 $ git remote -v  # shows you the URLs that Git has stored for the shortname to be used when reading and writing to that remote
 origin	https://github.com/schacon/ticgit (fetch)
 origin	https://github.com/schacon/ticgit (push)
 ```
+
+```bash
+git fetch upstream --tags
+```
+
 
 ### Change remote's URL
 
