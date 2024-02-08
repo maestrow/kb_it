@@ -13,3 +13,11 @@ set -x			# activate debugging from here
 w
 set +x			# stop debugging from here
 ```
+
+
+set -x or set -o xtrace expands variables and prints a little + sign before the line.
+set -v or set -o verbose does not expand the variables before printing.
+Use set +x and set +v to turn off the above settings.
+
+
+`set -e` - stop on 1st error. See: http://web.archive.org/web/20110314180918/http://www.davidpashley.com/articles/writing-robust-shell-scripts.html
