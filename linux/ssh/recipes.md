@@ -45,11 +45,12 @@ cat ~/.ssh/id_rsa.pub | \
 
 ## Disable PasswordAuthentication, enable Pubkey Authentication 
 
-- ssh-copy-id $ip
+- ssh-copy-id [-i $identity_file] $ip
 - ssh $ip
 - nano /etc/ssh/sshd_config 
   - PubkeyAuthentication yes
   - PasswordAuthentication no
+  - PermitRootLogin no
 - service ssh restart
 
 ## HowTo: Pubkey Authentication

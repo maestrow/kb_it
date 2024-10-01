@@ -19,7 +19,14 @@
     tar -ztvf my-data.tar.gz
     tar -tvf my-data.tar.gz
     tar -tvf my-data.tar.gz 'search-pattern'
+    tar --exclude='*/*' -ztvf # list top level dirs
 
+Options:
+
+    -z: Indicates that the file is compressed using gzip.
+    -t: Lists the contents of the archive.
+    -v: Displays verbose output, showing additional information about each file.
+    -f my-data.tar.gz: Specifies the name of the archive file to operate on (my-data.tar.gz).
 
 ## C option
 

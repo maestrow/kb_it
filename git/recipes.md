@@ -8,6 +8,7 @@
   - [Push the branch](#push-the-branch)
   - [Delete branch](#delete-branch)
   - [Rename branch](#rename-branch)
+  - [Rename remote branch](#rename-remote-branch)
   - [Git workflow with clean master](#git-workflow-with-clean-master)
 - [How to update/checkout a single file from remote origin master?](#how-to-updatecheckout-a-single-file-from-remote-origin-master)
 - [Merge](#merge)
@@ -84,6 +85,13 @@ https://multiplestates.wordpress.com/2015/02/05/rename-a-local-and-remote-branch
     git push origin :old-name new-name  # Delete the old-name remote branch and push the new-name local branch
     git push origin -u new-name         # Reset the upstream branch for the new-name local branch
 
+### Rename remote branch
+
+    git push origin old_name:new_name  # push local branch to remote with new_name
+    git push origin --delete old_name
+    git branch --set-upstream-to=origin/new_name
+    git branch -vv # verify
+
 
 ### Git workflow with clean master
 
@@ -129,9 +137,9 @@ fonts-firacode
 
 ## Squash and Merge
 
-```
+```sh
 git checkout master
-git merge --squash bugfix
+git merge --squash $source_branch
 git commit
 ```
 

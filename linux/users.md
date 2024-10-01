@@ -18,6 +18,8 @@ usermod -aG docker username          # add username to docker group
 # show groups
 groups           # what groups current user belongs
 groups $user     # what groups $user belongs
+cat /etc/group   # list all groups
+getent group     # list all groups
 ```
 
 ## useradd - Create User
