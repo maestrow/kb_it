@@ -5,12 +5,6 @@
 
 # Commands
 
-
-    df -h
-
-    du
-    du -ah <file>
-
     mount -l
     fdisk -l
     fdisk -l /dev/sda
@@ -19,6 +13,15 @@
     blkid
 
     mkfs.btrfs -L <label> /dev/sdb1
+
+## Disk Free
+
+    df -h
+
+## Disk Usage
+
+    du
+    du -ah <file>
 
 ## lshw
 
